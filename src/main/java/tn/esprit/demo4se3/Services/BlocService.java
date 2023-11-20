@@ -52,4 +52,9 @@ public class BlocService implements IBlocService{
     public void deleteById(long id) {
         blocRepository.deleteById(id);
     }
+
+    @Override
+    public List<Bloc> selectByNomBloc(String nomBloc) {
+        return blocRepository.findByNomBloc(nomBloc);
+    }
 }

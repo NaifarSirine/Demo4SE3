@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("blocRest")
 public class BlocRestController {
     IBlocService iBlocService;
 
@@ -39,5 +40,9 @@ public class BlocRestController {
         return iBlocService.findById(id);
     }
 
+    @GetMapping("selectByNomBloc")
+    public List<Bloc> selectByNomBloc(@RequestParam String nomBloc){
+        return iBlocService.selectByNomBloc(nomBloc);
+    }
 
 }

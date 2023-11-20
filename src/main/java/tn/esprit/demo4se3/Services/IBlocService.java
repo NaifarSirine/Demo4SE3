@@ -12,5 +12,6 @@ public interface IBlocService {
     Bloc findById(long id);
     void delete(Bloc b);
     void deleteById(long id);
+    List<Bloc> selectByNomBloc(String nomBloc);
 
 }
